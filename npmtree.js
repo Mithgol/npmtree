@@ -12,4 +12,9 @@ if( process.argv.length < 3 ){
    clog('Examples:');
    clog('   npmtree uue');
    clog('   npmtree twi2fido@1.0.3');
-} else clog( require('./treecore.js')(process.argv[2]) );
+} else {
+   require('./treecore.js')(process.argv[2], function(err, output){
+      if( err ) throw err;
+      clog(output);
+   });
+}
