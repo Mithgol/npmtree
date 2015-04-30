@@ -11,5 +11,8 @@
 "repository": {
    "type": "git",
    "url": "https://github.com/Mithgol/npmtree.git"
+},
+"dependencies": {
+   "npm": "~2.8.4"
 }
 }
