@@ -1,6 +1,5 @@
 var async = require('async');
 var npm = require('npm');
-var _ = require('underscore');
 
 var clog = console.log;
 var repeat = require('underscore.string/repeat');
@@ -35,12 +34,12 @@ var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()
          ].join(''));
          return callback();
       }
-      var dataNames = _.keys(data);
+      var dataNames = Object.getOwnPropertyNames(data);
       if( dataNames.length < 1 ) return callback();
       var deps = data[dataNames[dataNames.length - 1]].dependencies;
       data = void 0;
       if( typeof deps === 'undefined' ) return callback();
-      var depsNames = _.keys(deps);
+      var depsNames = Object.getOwnPropertyNames(deps);
       if( depsNames.length < 1 ) return callback();
 
       async.eachSeries(
