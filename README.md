@@ -2,7 +2,7 @@
 
 This application (`npmtree`) outputs the tree of dependencies of a given npm package. That tree is presented in Markdown form.
 
-This application is currently in an early phase of its development and thus does not have the desired level of feature completeness.
+This application is written in JavaScript and requires [Node.js](http://nodejs.org/) to run. (Node.js version 0.10.x or 0.12.x is recommended. The latest stable [io.js](https://iojs.org/) is fine too.)
 
 ## Installing npmtree
 
