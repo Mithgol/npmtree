@@ -22,7 +22,15 @@ Instead of the above, download the [ZIP-packed](https://github.com/Mithgol/npmt
 
 You may now move that directory (for example, on a flash drive) across systems as long as they have the required version of Node.js installed.
 
-Unlike the above (`npm -g`), the application does not appear in the `PATH`, and thus you'll have to run it directly from the application's directory. You'll also have to run `node npmtree [parameters]` instead of `npmtree [parameters]`.
+Unlike the above (`npm -g`), the application does not appear in the `PATH`, and thus you'll have to run it directly from the application's directory. You'll also have to run `node npmtree` instead of `npmtree`.
+
+## Running npmtree
+
+Use your command line to type `npmtree packageName` when you need the tree of dependencies for the given package.
+
+Here's an example of running a portable installation of npmtree (the tree of JSHint's dependencies is displayed):
+
+![(screenshot)](https://cloud.githubusercontent.com/assets/1088720/7426904/c5184d9e-efd8-11e4-9a01-8fb18fe727db.gif)
 
 ## Testing npmtree
 
