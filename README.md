@@ -26,6 +26,8 @@ Unlike the above (`npm -g`), the application does not appear in the `PATH`, a
 
 ## Testing npmtree
 
+[![(build testing status)](https://img.shields.io/travis/Mithgol/npmtree/master.svg?style=plastic)](https://travis-ci.org/Mithgol/npmtree)
+
 It is necessary to install [JSHint](http://jshint.com/) for testing.
 
 * You may install JSHint globally (`npm install jshint -g`) or locally (`npm install jshint` in the directory of npmtree).
