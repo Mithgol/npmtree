@@ -24,6 +24,14 @@ You may now move that directory (for example, on a flash drive) across syst
 
 Unlike the above (`npm -g`), the application does not appear in the `PATH`, and thus you'll have to run it directly from the application's directory. You'll also have to run `node npmtree [parameters]` instead of `npmtree [parameters]`.
 
+## Testing npmtree
+
+It is necessary to install [JSHint](http://jshint.com/) for testing.
+
+* You may install JSHint globally (`npm install jshint -g`) or locally (`npm install jshint` in the directory of npmtree).
+
+After that you may run `npm test` (in the directory of npmtree). Only the JS code errors are caught; the code's behaviour is not tested.
+
 ## License
 
 MIT license (see the `LICENSE` file).
