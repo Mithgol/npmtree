@@ -34,12 +34,12 @@ var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()
          ].join(''));
          return callback();
       }
-      var dataNames = Object.getOwnPropertyNames(data);
+      var dataNames = Object.keys(data);
       if( dataNames.length < 1 ) return callback();
       var deps = data[dataNames[dataNames.length - 1]].dependencies;
       data = void 0;
       if( typeof deps === 'undefined' ) return callback();
-      var depsNames = Object.getOwnPropertyNames(deps);
+      var depsNames = Object.keys(deps);
       if( depsNames.length < 1 ) return callback();
 
       async.eachSeries(
