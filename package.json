@@ -13,7 +13,7 @@
    "url": "https://github.com/Mithgol/npmtree.git"
 },
 "dependencies": {
-   "async": "~1.0.0",
+   "async": "~1.2.1",
    "npm": "~2.10.0",
    "underscore.string": "~3.0.3"
 },
