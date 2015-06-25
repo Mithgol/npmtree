@@ -3,7 +3,7 @@
 "bin": "./npmtree.js",
 "preferGlobal": true,
 "main": "treecore.js",
-"version": "1.0.5",
+"version": "1.0.6",
 "description": "Outputs the tree of dependencies of a given npm package in Markdown form.",
 "keywords": ["tree", "dependency", "dependencies", "package", "packages", "npm"],
 "author": { "name": "Mithgol the Webmaster" },
@@ -15,7 +15,7 @@
 "dependencies": {
    "async": "~1.2.1",
    "npm": "~2.11.3",
-   "underscore.string": "~3.0.3"
+   "underscore.string": "~3.1.1"
 },
 "scripts": {
    "test": "jshint --verbose npmtree.js treecore.js"
