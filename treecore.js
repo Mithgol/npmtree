@@ -2,14 +2,13 @@ var async = require('async');
 var npm = require('npm');
 
 var clog = console.log;
-var repeat = require('underscore.string/repeat');
 
 var lvl2prefix = function(level){
    if( level < 1 ) return '* ';
 
-   if( level === 1 ) return repeat(' ', 3) + '* ';
+   if( level === 1 ) return ' '.repeat(3) + '* ';
 
-   return repeat( ' ', 3 + (level-1)*4 ) + '* ';
+   return ' '.repeat( 3 + (level-1)*4 ) + '* ';
 };
 
 var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()

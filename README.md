@@ -2,7 +2,9 @@
 
 This application (`npmtree`) outputs the tree of dependencies of a given npm package. That tree is presented in Markdown form.
 
-This application is written in JavaScript and requires [Node.js](http://nodejs.org/) to run. (Node.js version 0.10.x or 0.12.x or 4.0.x is recommended. The latest stable [io.js](https://iojs.org/) is fine too.)
+This application is written in JavaScript and requires [Node.js](http://nodejs.org/) to run.
+* Starting from v2.0.0, this module requires Node.js version 4.0.0 or newer.
+* You may run older versions of this module in Node.js version 0.10.x or 0.12.x. These older versions, however, had to contain an additional dependency ([`underscore.string`](https://www.npmjs.com/package/underscore.string)) as a polyfill for a missing [ECMAScript 2015 (ES6) feature](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) which is now a part of Node.js.
 
 ## Installing npmtree
 
