@@ -3,7 +3,7 @@ var npm = require('npm');
 
 var clog = console.log;
 
-var lvl2prefix = function(level){
+var lvl2prefix = level => {
    if( level < 1 ) return '* ';
 
    if( level === 1 ) return ' '.repeat(3) + '* ';
@@ -11,7 +11,7 @@ var lvl2prefix = function(level){
    return ' '.repeat( 3 + (level-1)*4 ) + '* ';
 };
 
-var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()
+var depsOnLevel = (parentsList, npm, packageName, callback) => { // ()
    var lvl = parentsList.length - 1;
    var circularRef = parentsList.indexOf(packageName);
    if( -1 < circularRef && circularRef < parentsList.length-1 ){
@@ -23,7 +23,7 @@ var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()
       ].join(''));
       return callback();
    }
-   npm.commands.view([packageName, 'dependencies'], true, function(err, data){
+   npm.commands.view([packageName, 'dependencies'], true, (err, data) => {
       if( err ){
          clog([
             lvl2prefix(lvl),
@@ -43,7 +43,7 @@ var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()
 
       async.eachSeries(
          depsNames,
-         function(dName, dNameDone){
+         (dName, dNameDone) => {
             var nextPackageName = dName + '@' + deps[dName];
             clog([
                lvl2prefix(lvl),
@@ -53,11 +53,11 @@ var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()
             ].join(''));
             var nextParents = [].concat(parentsList);
             nextParents.push(nextPackageName);
-            depsOnLevel(nextParents, npm, nextPackageName, function(){
+            depsOnLevel(nextParents, npm, nextPackageName, () => {
                dNameDone(null);
             });
          },
-         function dNamesProcessed(err){
+         err => {
             if( err ) throw err;
             callback();
          }
@@ -65,11 +65,9 @@ var depsOnLevel = function(parentsList, npm, packageName, callback){ // ()
    });
 };
 
-module.exports = function(packageName){
-
-   npm.load({}, function(err){
+module.exports = packageName => {
+   npm.load({}, err => {
       if( err ) throw err;
-      depsOnLevel([packageName], npm, packageName, function(){
-      });
+      depsOnLevel([packageName], npm, packageName, () => {});
    });
 };
