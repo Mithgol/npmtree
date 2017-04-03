@@ -3,7 +3,7 @@
 "bin": "./npmtree.js",
 "preferGlobal": true,
 "main": "treecore.js",
-"version": "2.0.17",
+"version": "2.0.18",
 "description": "Outputs the tree of dependencies of a given npm package in Markdown form.",
 "keywords": ["tree", "dependency", "dependencies", "package", "packages", "npm"],
 "author": { "name": "Mithgol the Webmaster" },
@@ -13,7 +13,7 @@
    "url": "https://github.com/Mithgol/npmtree.git"
 },
 "dependencies": {
-   "async": "~2.2.0",
+   "async": "~2.3.0",
    "npm": "~4.4.2"
 },
 "scripts": {
