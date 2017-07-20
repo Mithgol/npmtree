@@ -34,6 +34,10 @@ Here's an example of running a portable installation of npmtree (the tree o
 
 ![(screenshot)](https://cloud.githubusercontent.com/assets/1088720/7426904/c5184d9e-efd8-11e4-9a01-8fb18fe727db.gif)
 
+### Running without installing
+
+You can use [`npx`](https://github.com/zkat/npx) to run `npx npmtree packageName` without having to install npmtree permanently.
+
 ## Testing npmtree
 
 [![(build testing status)](https://img.shields.io/travis/Mithgol/npmtree/master.svg?style=plastic)](https://travis-ci.org/Mithgol/npmtree)
